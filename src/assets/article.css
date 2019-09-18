@@ -1,0 +1,55 @@
+.comment{
+   margin-top: 5%;
+   font-size: 24pt;
+   font-weight: bold;
+    
+}
+.comment-form{
+   padding-top: 20px;
+   padding-left: 30px;
+   font-size: 14pt;
+}
+.comment-name{
+   border-radius: 20px;
+ border: 1px solid;
+}
+[contenteditable] {
+   padding:12px; 
+}
+[data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #000;
+    font-style: italic;
+}
+[data-placeholder]:empty::after{
+   color: #666;
+}
+
+.btn-right{
+   text-align: right;
+   margin-right: 20px;
+}
+.btn-login-comment{
+   text-align: center;
+   padding-top: 50px;
+}
+div.btn-login-comment:hover{
+   cursor: pointer;
+}
+
+div.btn-right:hover{
+   cursor: pointer;
+}
+.boder-comment{
+   margin-top: 5%;
+   margin-left: 5%;
+   border-bottom: 1px solid;
+   border-top: 1px solid;
+}
+.div-comment:hover{
+   cursor: pointer;
+}
+img{
+   max-width:100%;
+   max-height:100%
+}
