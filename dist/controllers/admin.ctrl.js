@@ -31,7 +31,7 @@ module.exports = {
     },
     loginUser: (req, res, next) => {
         let user = req.body
-        console.log(user)
+
         let setuser = {
             username: 'admin',
             password: GetHash('n0p4ssw0rd!!'),
@@ -43,7 +43,10 @@ module.exports = {
         console.log(GetHash(user.userId));
         if (user.userId) {
             user.userId = user.userId.replace('"', '');
+            user.userId = user.userId.replace('"', '');
             user.password = user.password.replace('"', '');
+            user.password = user.password.replace('"', '');
+            console.log(user)
             Admin.findOne({
                     username: user.userId
                 })
