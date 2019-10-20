@@ -51,7 +51,7 @@
     "dev__": "node tools/daemon \"npm run start\" \"node server/app.js\"",
     "dev_": "concurrently --kill-others-on-fail \"npm run start\" \"node server/app.js\"",
     "start": "node dist/app.js",
-    "_start": "HTTPS=true react-scripts start",
+    "_start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
