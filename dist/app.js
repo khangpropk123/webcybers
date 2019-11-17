@@ -42,7 +42,12 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname);
 app.get("/", (request, response) => {
-    response.sendFile(path.join(__dirname, 'index.html'));
+    let og = {
+               title: "CybersVN Team",
+               description: "We share everything about security!!",
+               img: "https://cybersvn.team/assets/img/logo-cybers-2.svg"
+           }
+        response.render('index.html',{og:og})
 });
 app.get("/admin/*", (request, response) => {
     response.sendFile(path.join(__dirname, 'ad/index.html'));
@@ -60,7 +65,7 @@ app.get('/articleview/:id', async (req,response)=>{
        if(article){
            let og = {
                title: article.title,
-               description: article.description,
+               description: article.description.replace(/<[^>]+>/g, ''),
                img: article.feature_img
            }
         response.render('index.html',{og:og})
